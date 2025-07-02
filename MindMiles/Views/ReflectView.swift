@@ -1,5 +1,5 @@
 //
-//  DashboardView.swift
+//  FeedbackView.swift
 //  MindMiles
 //
 //  Created by Janik Wahrheit on 02.07.25.
@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct DashboardView: View {
+
+struct ReflectView: View {
     var body: some View {
         NavigationView {
             ZStack {
@@ -27,25 +28,15 @@ struct DashboardView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         // Begrüßung
                         VStack(alignment: .leading, spacing: 4) {
-                            Text("👋 Hallo!")
+                            Text("🧘 Reflexion ")
                                 .font(.title)
                                 .fontWeight(.bold)
 
-                            Text("Willkommen zurück!")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
                         }
                         .padding([.top, .leading, .trailing], 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                        ProgressCardView(distance: 54, goal: 80)
-                            .padding(.horizontal, 16)
-
-                        WeeklyStatsCardView(weeklyGoal: 70, dailyDistances: [10, 12, 8, 0, 7, 12, 24])
-                            .padding(.horizontal, 16)
-                        
-                        MotivationCarousel()
-
+        
                         Spacer(minLength: 20)
                     }
                 }
@@ -57,5 +48,5 @@ struct DashboardView: View {
 
 
 #Preview {
-    DashboardView()
+    ReflectView()
 }
