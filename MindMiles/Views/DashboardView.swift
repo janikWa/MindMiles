@@ -38,13 +38,14 @@ struct DashboardView: View {
                         .padding([.top, .leading, .trailing], 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                        ProgressCardView(distance: 54, goal: 80)
+                        ProgressCardView(distance: 43, goal: 80)
                             .padding(.horizontal, 16)
 
-                        WeeklyStatsCardView(weeklyGoal: 70, dailyDistances: [10, 12, 8, 0, 7, 12, 24])
+                        WeeklyStatsCardView(weeklyGoal: 100, dailyDistances: [10, 12, 8, 0, 7, 12, 24])
                             .padding(.horizontal, 16)
                         
                         MotivationCarousel()
+                            .padding(.horizontal, 16)
 
                         Spacer(minLength: 20)
                     }

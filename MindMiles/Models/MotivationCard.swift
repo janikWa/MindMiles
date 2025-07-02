@@ -6,6 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct MotivationCard: Identifiable {
+    let id = UUID()
+    let title: String
+    let text: String
+}
+
+
 enum MotivationCategory: CaseIterable {
     case fact
     case psychotip
@@ -24,10 +33,10 @@ enum MotivationCategory: CaseIterable {
     }
 }
 
-struct MotivationCard: Identifiable {
+struct MotivationCardWithCategory: Identifiable {
     let id = UUID()
-    let title: String
-    let text: String
+    let category: MotivationCategory
+    let card: MotivationCard
 }
 
 let motivationData: [MotivationCategory: [MotivationCard]] = [
@@ -96,4 +105,3 @@ let motivationData: [MotivationCategory: [MotivationCard]] = [
         MotivationCard(title: "Erinnerung", text: "Denke daran: Jeder Schritt zählt."),
     ]
 ]
-
