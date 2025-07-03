@@ -37,7 +37,12 @@ struct ReflectView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
 
         
-                        Spacer(minLength: 20)
+                        ImprovementCard(wellbeingImprovement: 0.35)
+                            .padding(.horizontal, 16)
+                        
+                        MoodChartView()
+                            .padding(.horizontal, 16)
+  
                     }
                 }
             }
