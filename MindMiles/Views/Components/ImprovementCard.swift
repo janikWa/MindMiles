@@ -23,12 +23,14 @@ struct ImprovementCard: View {
                     .font(.headline)
                     .foregroundColor(Color.white)
                     .padding(.top, 16)
-                    .padding(.horizontal, 16)
+              
+                
 
                 Text("Du fühlst dich nach deinen Läufen um \(Int(wellbeingImprovement * 100)) % besser! 🌟")
                     .font(.body)
                     .foregroundColor(Color.white)
-                    .padding(.horizontal, 16)
+ 
+                
                     .padding(.bottom, 16)
      
             }
@@ -36,7 +38,7 @@ struct ImprovementCard: View {
             
         }
         .frame(maxWidth: .infinity)
-        .background(Color.progressGreen.opacity(0.8))
+        .background(Color.progressGreen.opacity(0.6))
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
         

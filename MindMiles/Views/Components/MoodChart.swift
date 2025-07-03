@@ -18,6 +18,7 @@ struct MoodData: Identifiable {
 
 struct MoodChartView: View {
     @State private var selectedTimeRange: String = "week"
+    @State private var animatedMoodData: [MoodData] = []
 
     let moodDataWeek: [MoodData] = [
         .init(date: "Mo", mood: 3),
@@ -84,12 +85,20 @@ struct MoodChartView: View {
 
     var body: some View {
         VStack {
+            Text("Dein Stimmungstrend")
+                .font(.title2)
+                .fontWeight(.semibold)
+                .padding(.vertical, 16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
+            
             Picker("Time Range", selection: $selectedTimeRange) {
                 Text("Diese Woche").tag("week")
                 Text("12 Wochen").tag("12weeks")
                 Text("12 Monate").tag("12months")
             }
             .pickerStyle(.segmented)
+            .tint(Color.calmGreen50)
             .padding()
 
             Chart {
@@ -111,7 +120,6 @@ struct MoodChartView: View {
                         )
                     )
 
-                    // Die Linie darüber
                     LineMark(
                         x: .value("Date", dataPoint.date),
                         y: .value("Mood", dataPoint.mood)
@@ -150,6 +158,9 @@ struct MoodChartView: View {
             }
             .frame(height: 200)
             .padding()
+            .transition(.opacity) // <<< sanfte Überblendung
+            .animation(.easeIn(duration: 0.4), value: selectedTimeRange)
+       
         }
         .frame(maxWidth: .infinity)
         .background(Color.white.opacity(0.5))
