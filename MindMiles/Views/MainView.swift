@@ -13,12 +13,10 @@ import SwiftUI
 
 struct MainView: View {
     init() {
-        // Setzt Hintergrundfarbe der Tab Bar (helles Grün z. B.)
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithOpaqueBackground()
         tabBarAppearance.backgroundColor = UIColor(Color.calmGreen50)
         
-        // Optional: Farbe nicht selektierter Items
         UITabBar.appearance().unselectedItemTintColor = UIColor(Color.calmGray500)
         UITabBar.appearance().standardAppearance = tabBarAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
@@ -55,13 +53,7 @@ struct MainView: View {
 }
 
 
-struct ActivitiesView: View {
-    var body: some View {
-        Text("Aktivitäten")
-            .font(.largeTitle)
-            .foregroundColor(.gray)
-    }
-}
+
 
 struct ProfileView: View {
     var body: some View {

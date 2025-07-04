@@ -137,7 +137,6 @@ struct WeeklyStatsCardView: View {
             // Setze die Höhen für die Animation
             animateBars()
         }
-        // WICHTIG: Beobachte Änderungen an rawDailyDistances, um die Animation neu zu starten
         .onChange(of: rawDailyDistances) { newRawDistances in
             // Re-initialisiere animatedWeeklyData und starte die Animation neu
             animatedWeeklyData = Self.transformRawData(newRawDistances, dailyGoal: dailyGoal)
