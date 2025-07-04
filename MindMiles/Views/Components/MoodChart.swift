@@ -89,7 +89,7 @@ struct MoodChartView: View {
                 .font(.title2)
                 .fontWeight(.semibold)
                 .padding(.vertical, 16)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.horizontal)
             
             Picker("Time Range", selection: $selectedTimeRange) {

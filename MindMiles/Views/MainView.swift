@@ -53,13 +53,7 @@ struct MainView: View {
 }
 
 
-struct ActivitiesView: View {
-    var body: some View {
-        Text("Aktivitäten")
-            .font(.largeTitle)
-            .foregroundColor(.gray)
-    }
-}
+
 
 struct ProfileView: View {
     var body: some View {

@@ -42,6 +42,9 @@ struct ReflectView: View {
                         
                         MoodChartView()
                             .padding(.horizontal, 16)
+                        
+                        WeekSummaryCard(moodImprovement: 0.2, activitiesCount: 6, longestActivity: 31)
+                            .padding(.horizontal, 16)
   
                     }
                 }
