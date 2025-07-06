@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct MindMilesApp: App {
+    @AppStorage("isLoggedIn") var isLoggedIn = false
     var body: some Scene {
         WindowGroup {
-            MainView()
+            //if isLoggedIn {
+                    MainView()
+              //  } else {
+                 //   LoginView()
+                //}
         }
     }
 }

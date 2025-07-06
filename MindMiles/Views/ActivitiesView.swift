@@ -59,7 +59,7 @@ struct ActivitiesView: View {
                                     }
                                     .padding()
                                     .frame(maxWidth: .infinity)
-                                    .background(Color.progressGreen)
+                                    .background(Color.progressGreen.opacity(0.6))
                                     .foregroundColor(.white)
                                     .cornerRadius(12)
                                 }
