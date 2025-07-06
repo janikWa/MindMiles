@@ -17,38 +17,38 @@ struct DashboardView: View {
                         Color.white,
                         Color.calmGreen50,
                         Color.calmOrange50
-                    ]),
+                   ]),
                     startPoint: .topLeading,
-                    endPoint: .bottomTrailing
+                   endPoint: .bottomTrailing
                 )
-                .ignoresSafeArea()
+               .ignoresSafeArea()
 
                 ScrollView { // Hier die ScrollView
-                    VStack(alignment: .leading, spacing: 16) {
+                   VStack(alignment: .leading, spacing: 16) {
                         // Begrüßung
-                        VStack(alignment: .leading, spacing: 4) {
+                       VStack(alignment: .leading, spacing: 4) {
                             Text("👋 Hallo!")
                                 .font(.title)
-                                .fontWeight(.bold)
+                               .fontWeight(.bold)
 
                             Text("Willkommen zurück!")
                                 .font(.subheadline)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(Color.gray)
                         }
                         .padding([.top, .leading, .trailing], 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                         ProgressCardView(distance: 43, goal: 80)
-                            .padding(.horizontal, 16)
+                           .padding(.horizontal, 16)
 
                         WeeklyStatsCardView(weeklyGoal: 100, dailyDistances: [10, 12, 8, 0, 7, 12, 24])
-                            .padding(.horizontal, 16)
+                           .padding(.horizontal, 16)
                         
                         MotivationCarousel()
-                            .padding(.horizontal, 16)
+                           .padding(.horizontal, 16)
 
-                        Spacer(minLength: 20)
-                    }
+                       Spacer(minLength: 20)
+                   }
                 }
             }
             .navigationBarHidden(true)
